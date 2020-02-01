@@ -33,3 +33,20 @@ public:
         return head;
     }
 };
+
+/*
+
+暴力递归！
+
+时间和空间的效果反而要更好
+
+*/
+
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        if(!head || !head->next) return head;
+        head->next = deleteDuplicates(head->next);
+        return head->val == head->next->val ? head->next : head;
+    }
+};
