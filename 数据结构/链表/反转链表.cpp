@@ -12,7 +12,7 @@ struct ListNode {
 };
 
 /*
-
+头插法
 Time complexity : O(n)
 Space complexity : O(n) 另外占用了一个这么长的链表的空间，使用了外部空间
 
@@ -42,7 +42,7 @@ public:
 };
 
 /*
-
+原地翻转
 Time complexity : O(n)
 Space complexity : O(1) 不使用外部空间
 
