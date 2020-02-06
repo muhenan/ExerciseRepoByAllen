@@ -21,6 +21,8 @@ struct TreeNode {
 
 */
 
+// 在树这个根目录下的题基本都是递归是比较 general 的题，比较特殊的题都有相应的分类文件夹
+
 
 // 两树相等
 bool isSame(TreeNode* s, TreeNode* t) {
