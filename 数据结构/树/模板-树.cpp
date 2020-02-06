@@ -3,6 +3,7 @@
 #include<algorithm>
 #include<vector>
 #include<queue>   // 层次遍历  BFS
+#include<stack>   // 循环遍历
 #include<map>
 using namespace std;
 
