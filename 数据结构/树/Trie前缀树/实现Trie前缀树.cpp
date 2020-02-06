@@ -13,7 +13,7 @@ class Trie
 public:
     /** Initialize your data structure here. */
     Trie() {}
-    //对于这个析构函数，我保持质疑
+    //对于这个析构函数，看下面的二叉树析构
     ~Trie()
     {
         for (int i = 0; i < 26; i++)
@@ -66,3 +66,31 @@ private:
     Trie* next[26] = {nullptr};
 };
 
+
+/* 
+
+好吧，二叉树析构就是这样
+
+左边有就析构左边，右边有就右边
+
+一个delete，连带的全部删除，厉害了delete
+
+class TreeNode{  
+private:  
+    string value;  
+    TreeNode *left;  
+    TreeNode *right;  
+  
+public:  
+    TreeNode() : value(""), left(null), right(null){}  
+  
+    ~TreeNode(){  
+        cout << "~TreeNode()" << endl;  
+        if (left != null){  
+            delete left; //递归析构左子树  
+        }  
+        if (right != null){  
+            delete right;//递归析构右子树  
+        }  
+    }
+}; */
