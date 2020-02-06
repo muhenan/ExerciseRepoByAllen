@@ -2,7 +2,7 @@
 #include<math.h>
 #include<algorithm>
 #include<vector>
-#include<vector>   // 层次遍历  BFS
+#include<queue>   // 层次遍历  BFS
 #include<map>
 using namespace std;
 
