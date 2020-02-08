@@ -3,5 +3,11 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "iostream": "cpp"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     }
 }
