@@ -18,6 +18,8 @@ struct TreeNode {
 // 两数之和，思路和之前有序数组的思路一样
 // 搞到有序数组，然后双指针分别从两头开始走
 
+// 还是说一句，这里一个小细节，vector 引用传参
+
 class Solution {
 public:
     bool findTarget(TreeNode* root, int k) {
