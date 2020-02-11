@@ -1,6 +1,7 @@
 package DataStructure.HashMap;
 
-import java.util.HashMap;;
+import java.util.HashMap;
+import java.util.HashSet;
 
 class HashMapJava{
 
@@ -48,7 +49,21 @@ public int[] twoSum(int[] nums, int target) {
     return null;
 }
 
+/*
 
+217 重复元素
+
+Java强大的 set
+
+*/
+
+public boolean containsDuplicate(int[] nums) {
+    HashSet<Integer> set = new HashSet<>();
+    for (int num : nums) {
+        set.add(num);
+    }
+    return set.size() < nums.length;
+}
 
 
 
