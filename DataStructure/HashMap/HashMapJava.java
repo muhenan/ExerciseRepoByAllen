@@ -66,6 +66,45 @@ public boolean containsDuplicate(int[] nums) {
 }
 
 
+//594. Longest Harmonious Subsequence (Easy)
+
+/*
+
+note 大神方法 ：
+    先计数，用hashmap计数，注意getOrDefault的应用
+    找最大值，遍历一遍，得他和他后一个的个数和（前提的有后一个）
+
+*/
+
+public int findLHS(int[] nums) {
+    HashMap<Integer, Integer> countForNum = new HashMap<>();
+    for (int num : nums) {
+        countForNum.put(num, countForNum.getOrDefault(num, 0) + 1);
+    }
+    int longest = 0;
+    for (int num : countForNum.keySet()) {
+        if (countForNum.containsKey(num + 1)) {
+            longest = Math.max(longest, countForNum.get(num + 1) + countForNum.get(num));
+        }
+    }
+    return longest;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
