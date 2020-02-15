@@ -92,23 +92,29 @@ public int findLHS(int[] nums) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//128. Longest Consecutive Sequence (Hard)
+/*这个优化算法与暴力算法仅有两处不同：这些数字用一个 HashSet 保存（或者用 Python 里的 Set）
+实现 O(1) 时间的查询，同时，我们只对 当前数字 - 1 不在哈希表里的数字
+作为连续序列的第一个数字去找对应的最长序列，这是因为其他数字一定已经出现在了某个序列里。
+*/
+    public int longestConsecutive(int[] nums) {
+        HashSet<Integer> num_set = new HashSet<Integer>();
+        for (int num : nums) {
+            num_set.add(num);
+        }
+        int longestStreak = 0;
+        for (int num : num_set) {
+            if (!num_set.contains(num-1)) {
+                int currentNum = num;
+                int currentStreak = 1;
+                while (num_set.contains(currentNum+1)) {
+                    currentNum++;
+                    currentStreak++;
+                }
+                longestStreak = Math.max(longestStreak, currentStreak);
+            }
+        }
+        return longestStreak;
+    }
 
 }
